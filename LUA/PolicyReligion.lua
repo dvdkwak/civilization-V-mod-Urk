@@ -15,12 +15,11 @@ local civilizationID = GameInfoTypes["CIVILIZATION_URK"]
 function CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion(playerID)
 	local player = Players[playerID]
 	if (player:IsAlive() and player:GetCivilizationType() == civilizationID) then
-		local faithBonus = 12
+		local faithBonus = 12 + ( 1.5 * player.GetCultureYield() )
 		player:ChangeFaith(faithBonus)
+		print("Amount of faith gained: " + player.GetCultureYield())
 	end
 end
-
--- kc is jojo level
 
 GameEvents.PlayerAdoptPolicy.Add(CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion)
 GameEvents.PlayerAdoptPolicyBranch.Add(CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion)
