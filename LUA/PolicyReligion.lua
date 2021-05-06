@@ -18,8 +18,6 @@ function CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion(playerID)
 		local faithBonus = 12
 		player:ChangeFaith(faithBonus)
 	end
-	print("Dit is een test")
-	print(civilizationID)
 end
 
 GameEvents.PlayerAdoptPolicy.Add(CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion)
