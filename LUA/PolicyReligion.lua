@@ -15,9 +15,9 @@ local civilizationID = GameInfoTypes["CIVILIZATION_URK"]
 function CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion(playerID)
 	local player = Players[playerID]
 	if (player:IsAlive() and player:GetCivilizationType() == civilizationID) then
-		local faithBonus = 12 + math.floor( ( 1.5 * player.GetTotalJONSCulturePerTurn() ) + 0.5 )
+		local faithBonus = 12 + math.floor( ( 1.5 * player:GetTotalJONSCulturePerTurn() ) + 0.5 )
 		player:ChangeFaith(faithBonus)
-		print("Amount of faith gained: " + player.GetTotalJONSCulturePerTurn())
+		print("Amount of faith gained: " + player:GetTotalJONSCulturePerTurn())
 	end
 end
 
