@@ -20,5 +20,7 @@ function CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion(playerID)
 	end
 end
 
+-- kc is jojo
+
 GameEvents.PlayerAdoptPolicy.Add(CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion)
 GameEvents.PlayerAdoptPolicyBranch.Add(CrispyJuice_KoosRabbers_TimeForChange_PolicyReligion)
